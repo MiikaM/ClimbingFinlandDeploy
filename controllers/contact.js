@@ -15,7 +15,7 @@ const { sendContactInfo } = require('../services/contactService')
 contactRouter.get('/verification/:token', async (req, res) => {
 
   try {
-    console.log('Tapahtyy')
+    console.log('Tapahtuu')
     
     const { user: id } = jwt.verify(req.params.token, process.env.EMAIL_SECRET)
     await UserBase.findByIdAndUpdate(id, { verified: true })
@@ -59,9 +59,10 @@ contactRouter.post('/forgot', async (req, res) => {
  * Returns: 
  */
 contactRouter.post('/contact', async (req, res) => {
-  const body = req.body
   try {
-    await sendContactInfo(req.body)
+    const body = req.body
+
+    await sendContactInfo(body)
     res.status(200).send({ notification: 'Your message has been sent. We will be in touch with you shortly!' }).end()
   } catch (err) {
     res.status(400).json({ error: err.message })
