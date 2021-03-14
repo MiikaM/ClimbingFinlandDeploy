@@ -56,11 +56,12 @@ contactRouter.post('/forgot', async (req, res) => {
 contactRouter.post('/contact', async (req, res) => {
   const body = req.body
   try {
-    sendContactInfo(req.body)
+    await sendContactInfo(req.body)
+    res.status(200).send({ notification: 'Your message has been sent. We will be in touch with you shortly!' }).end()
   } catch (err) {
     res.status(400).json({ error: err.message })
   }
-  res.status(200).send({ notification: 'Your message has been sent. We will be in touch with you shortly!' }).end()
+
 })
 
 /**

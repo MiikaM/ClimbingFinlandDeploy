@@ -14,6 +14,8 @@ const sendContactInfo = async (contact_info) => {
       subject: `New contact request: ${contact_info.name}`,
       html: `<div><h1> Message:</h1><p> ${contact_info.message}</p>  <div> <Strong>From: ${contact_info.email}</Strong></div></div>`
     })
+
+    return true
   } catch (err) {
     logger.error({ err })
   }
