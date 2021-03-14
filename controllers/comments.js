@@ -54,7 +54,6 @@ commentsRouter.post('/', authenticate, async (req, res) => {
     const newComment = await checkComment(body, body.id, req.user)
     const addedComment = await addComment(newComment)
     const comment = await Comment.findById(addedComment.id ).populate('user', { name: 1, avatar: 1, username: 1 })
-    console.log({comment})
     
     res.status(201).json(comment.toJSON())
   } catch (err) {

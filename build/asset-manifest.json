@@ -1,22 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.98fb9491.chunk.css",
-    "main.js": "/static/js/main.4f108403.chunk.js",
-    "main.js.map": "/static/js/main.4f108403.chunk.js.map",
+    "main.css": "/static/css/main.8702ead0.chunk.css",
+    "main.js": "/static/js/main.a7ece1c3.chunk.js",
+    "main.js.map": "/static/js/main.a7ece1c3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c8a21426.js",
     "runtime-main.js.map": "/static/js/runtime-main.c8a21426.js.map",
-    "static/js/2.ffdbf3ae.chunk.js": "/static/js/2.ffdbf3ae.chunk.js",
-    "static/js/2.ffdbf3ae.chunk.js.map": "/static/js/2.ffdbf3ae.chunk.js.map",
+    "static/js/2.2c5801b0.chunk.js": "/static/js/2.2c5801b0.chunk.js",
+    "static/js/2.2c5801b0.chunk.js.map": "/static/js/2.2c5801b0.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5f91d0a805465a4bdee5065f9894e889.js": "/precache-manifest.5f91d0a805465a4bdee5065f9894e889.js",
+    "precache-manifest.c4945c73ee536fdb174a0f52277fc918.js": "/precache-manifest.c4945c73ee536fdb174a0f52277fc918.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.98fb9491.chunk.css.map": "/static/css/main.98fb9491.chunk.css.map",
-    "static/js/2.ffdbf3ae.chunk.js.LICENSE.txt": "/static/js/2.ffdbf3ae.chunk.js.LICENSE.txt",
+    "static/css/main.8702ead0.chunk.css.map": "/static/css/main.8702ead0.chunk.css.map",
+    "static/js/2.2c5801b0.chunk.js.LICENSE.txt": "/static/js/2.2c5801b0.chunk.js.LICENSE.txt",
     "static/media/homepage.scss": "/static/media/HomepageTopBG.611d83e2.jpg",
-    "static/media/avatar.svg": "/static/media/avatar.747f526f.svg",
-    "static/media/chad-madden-8mCMQSq41gQ-unsplash.jpg": "/static/media/chad-madden-8mCMQSq41gQ-unsplash.2c05fe38.jpg",
     "static/media/close.svg": "/static/media/close.da67cfb9.svg",
-    "static/media/colton-sturgeon-odKeTFsBDgE-unsplash.jpg": "/static/media/colton-sturgeon-odKeTFsBDgE-unsplash.54b0f1ec.jpg",
     "static/media/footer.scss": "/static/media/footerBG.374bc14c.jpg",
     "static/media/google-place.svg": "/static/media/google-place.c9e3a731.svg",
     "static/media/user-settings.scss": "/static/media/jerry-zhang-Y8lCoTRgHPE-unsplash.b81e3043.jpg",
@@ -34,8 +31,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c8a21426.js",
-    "static/js/2.ffdbf3ae.chunk.js",
-    "static/css/main.98fb9491.chunk.css",
-    "static/js/main.4f108403.chunk.js"
+    "static/js/2.2c5801b0.chunk.js",
+    "static/css/main.8702ead0.chunk.css",
+    "static/js/main.a7ece1c3.chunk.js"
   ]
 }

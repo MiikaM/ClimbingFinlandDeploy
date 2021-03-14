@@ -14,15 +14,11 @@ const addPlace = async ( place, file=null) => {
   //   const imagePath = await uploadImage(file)
   //   place.image = imagePath
   // }
-  console.log({place})
   
 
   const newPlace = new Place({
     ...place
-  })
-
-  console.log({newPlace})
-  
+  })  
 
   const savedPlace = await newPlace.save()
   return savedPlace
@@ -89,13 +85,20 @@ const updatePlaceImage = async (id, image) => {
  * @returns 
  */
 const removePlace = async (id) => {
-  const placeToRemove = await Place.findByIdAndDelete(id)
+  const placeToRemove = await Place.findById(id)
 
   if (!placeToRemove) {
     throw new Error('Couldn\'t find the place you were trying to remove.')
   }
 
-  return placeToRemove
+  const placeComments = await Comment.find({place: placeToRemove._id})
+
+  await placeToRemove.remove()
+  const removeComments = placeComments.map(async comment => {
+    await comment.remove()
+  })
+
+  Promise.all(removeComments)
 }
 
 module.exports = {

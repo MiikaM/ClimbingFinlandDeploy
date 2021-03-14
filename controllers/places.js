@@ -37,7 +37,6 @@ placesRouter.post('/', authenticate, upload.single('imageData'), async (req, res
     // const file = req.file
     const body = req.body.place
     const parsed = JSON.parse(body)
-    console.log({ parsed })
 
     await checkAdmin(req.user.username)
     checkVerified(req.user.verified)
@@ -46,7 +45,7 @@ placesRouter.post('/', authenticate, upload.single('imageData'), async (req, res
 
     res.status(201).json(addedPlace.toJSON())
   } catch (err) {
-    console.log({ err })
+    logger.error({ err })
 
     res.status(400).json({ error: err.message })
   }
@@ -109,9 +108,9 @@ placesRouter.delete('/:id', authenticate, async (req, res) => {
   try {
     await checkAdmin(req.user.id)
     checkVerified(req.user.verified)
-    await removePlace(req.params.id)
+    await removePlace(req?.params?.id)
 
-    res.json(204).end()
+    res.json(204).send({id:req.params.id}.toJSON()).end()
   } catch (err) {
     res.status(400).json({ error: err.message })
   }
