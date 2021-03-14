@@ -18,7 +18,7 @@ contactRouter.get('/verification/:token', async (req, res) => {
     const { user: id } = jwt.verify(req.params.token, process.env.EMAIL_SECRET)
     await UserBase.findByIdAndUpdate(id, { verified: true })
 
-    return res.redirect('http://localhost:3001/')
+    return res.redirect('https://climbing-finland-v2.herokuapp.com/')
   } catch (err) {
     res.status(400).json({ error: err.message })
   }
@@ -79,7 +79,7 @@ contactRouter.get('/passwordReset/:token', async (req, res) => {
     }
 
     //To front
-    return res.cookie('token_reset', token, { httpOnly: true }).redirect('http://localhost:3001/reset_password')
+    return res.cookie('token_reset', token, { httpOnly: true }).redirect('https://climbing-finland-v2.herokuapp.com/reset_password')
 
   } catch (err) {
     res.status(400).json({ error: err.message })

@@ -28,11 +28,11 @@ mongoose.connect(mongoUrl, { useCreateIndex: true, useFindAndModify: false, useN
     logger.error('Error occured connecting to MongoDB', error.message)
   })
 
-  app.use(express.static(path.join(__dirname, 'build')))
-// NO
-// WILL - IT _ WORK
+app.use(express.static(path.join(__dirname, 'build')))
+
+
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: ['https://climbing-finland-v2.herokuapp.com/'],
   methods: ['GET', 'POST', 'PUT'],
   credentials: true
 }))
@@ -50,7 +50,7 @@ app.use('/api', contactRouter)
 app.use('/', frontendRouter)
 
 
-//nouus
+
 
 // if (process.env.NODE_ENV === 'test') {
 //   const testingRouter = require('./controllers/testing')

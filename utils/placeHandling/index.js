@@ -18,7 +18,6 @@ const checkPlace = (object) => {
     openingHours: parseOpenHours(object.openingHours),
     prices: parsePrices(object.prices),
     // image: parseImage(object.image),
-    image: object.image,
     tags: parseTags(object.tags),
     city: parseCity(object.city),
     address: parseAddress(object.address),

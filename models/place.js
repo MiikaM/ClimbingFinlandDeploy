@@ -18,7 +18,8 @@ const placeSchema = mongoose.Schema({
     required: true
   },
   image: {
-    type: String
+    type: String,
+    default: 'uploads\\bg\\hkk-kansi.jpg'
   },
   openingHours: {
     type: Object,

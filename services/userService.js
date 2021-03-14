@@ -149,7 +149,7 @@ const hashPassword = async (passwords) => {
 const sendVerificationEmail = (user) => {
 
   const token = jwt.sign({ user: user.id }, process.env.EMAIL_SECRET, { expiresIn: '1d' })
-  const url = `http://localhost:3001/api/verification/${token}`
+  const url = `https://climbing-finland-v2.herokuapp.com/api/verification/${token}`
 
   transporter.sendMail({
     to: user.email, // list of receivers
@@ -167,7 +167,7 @@ const sendResetPasswordEmail = (user) => {
   try {
     const token = jwt.sign({ user }, process.env.RESET_SECRET, { expiresIn: '1h' })
 
-    const url = `http://localhost:3001/api/passwordReset/${token}`
+    const url = `https://climbing-finland-v2.herokuapp.com/api/passwordReset/${token}`
 
     transporter.sendMail({
       to: user.email,

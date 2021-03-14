@@ -13,13 +13,8 @@ const addComment = async (comment) => {
     ...comment
   })
 
-
   const savedComment = await newComment.save()
-
-  const populatedComment = await savedComment.populate('user', { name: 1, avatar: 1, username: 1 })
-
-
-  return populatedComment
+  return savedComment
 }
 
 /**
