@@ -12,8 +12,9 @@
     "lint": "eslint .",
     "build:ui": "rm -rf build && cd ../frontend && npm run build --prod && cp -r build ../backend",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
-    "logs:prod": "heroku logs --tail",
-    "start:test": "cross-env NODE_ENV=test node index.js"
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",    
+    "logs:prod": "heroku logs --tail"
   },
   "keywords": [
     "Climbing",
