@@ -106,7 +106,7 @@ placesRouter.put('/upload/:id', authenticate, upload.single('imageData'), async 
 placesRouter.delete('/:id', authenticate, async (req, res) => {
 
   try {
-    await checkAdmin(req.user.id)
+    await checkAdmin(req.user.username)
     checkVerified(req.user.verified)
     await removePlace(req?.params?.id)
 
