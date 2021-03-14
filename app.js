@@ -16,7 +16,7 @@ const contactRouter = require('./controllers/contact')
 const frontendRouter = require('./controllers/frontend')
 
 
-const mongoUrl = config.MONGODB_URI
+const mongoUrl = process.env.PORT || 3001
 mongoose.set('runValidators', true)
 logger.info('Connecting to ', mongoUrl)
 
