@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.98fb9491.chunk.css",
+    "main.js": "/static/js/main.497e8960.chunk.js",
+    "main.js.map": "/static/js/main.497e8960.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c8a21426.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c8a21426.js.map",
+    "static/js/2.be2da2b6.chunk.js": "/static/js/2.be2da2b6.chunk.js",
+    "static/js/2.be2da2b6.chunk.js.map": "/static/js/2.be2da2b6.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0d6abb43e11a2d592d40fd4c386cf919.js": "/precache-manifest.0d6abb43e11a2d592d40fd4c386cf919.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.98fb9491.chunk.css.map": "/static/css/main.98fb9491.chunk.css.map",
+    "static/js/2.be2da2b6.chunk.js.LICENSE.txt": "/static/js/2.be2da2b6.chunk.js.LICENSE.txt",
+    "static/media/homepage.scss": "/static/media/HomepageTopBG.611d83e2.jpg",
+    "static/media/avatar.svg": "/static/media/avatar.747f526f.svg",
+    "static/media/chad-madden-8mCMQSq41gQ-unsplash.jpg": "/static/media/chad-madden-8mCMQSq41gQ-unsplash.2c05fe38.jpg",
+    "static/media/close.svg": "/static/media/close.da67cfb9.svg",
+    "static/media/colton-sturgeon-odKeTFsBDgE-unsplash.jpg": "/static/media/colton-sturgeon-odKeTFsBDgE-unsplash.54b0f1ec.jpg",
+    "static/media/footer.scss": "/static/media/footerBG.374bc14c.jpg",
+    "static/media/google-place.svg": "/static/media/google-place.c9e3a731.svg",
+    "static/media/user-settings.scss": "/static/media/jerry-zhang-Y8lCoTRgHPE-unsplash.b81e3043.jpg",
+    "static/media/logo-blue.svg": "/static/media/logo-blue.a150db00.svg",
+    "static/media/logo-white-header.svg": "/static/media/logo-white-header.8277cea1.svg",
+    "static/media/logo-white.svg": "/static/media/logo-white.53c9c881.svg",
+    "static/media/logout.svg": "/static/media/logout.cb7690d4.svg",
+    "static/media/mail.svg": "/static/media/mail.d8864552.svg",
+    "static/media/phone.svg": "/static/media/phone.e3aed7d1.svg",
+    "static/media/roya-ann-miller-G2QYE9czCEw-unsplash.jpg": "/static/media/roya-ann-miller-G2QYE9czCEw-unsplash.c46cf8c9.jpg",
+    "static/media/search-blue.svg": "/static/media/search-blue.df215230.svg",
+    "static/media/search.svg": "/static/media/search.422d423f.svg",
+    "static/media/settings.svg": "/static/media/settings.c5e2e3d7.svg",
+    "static/media/world.svg": "/static/media/world.7fc624ab.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c8a21426.js",
+    "static/js/2.be2da2b6.chunk.js",
+    "static/css/main.98fb9491.chunk.css",
+    "static/js/main.497e8960.chunk.js"
+  ]
+}

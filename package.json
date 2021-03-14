@@ -1,0 +1,57 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for ClimbingFinland fullstack project",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "lint": "eslint .",
+    "build:ui": "rm -rf build && cd ../frontend && npm run build --prod && cp -r build ../backend",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
+    "logs:prod": "heroku logs --tail",
+    "start:test": "cross-env NODE_ENV=test node index.js"
+  },
+  "keywords": [
+    "Climbing",
+    "backend"
+  ],
+  "author": "Miika Mikkonenm",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "firebase-admin": "^9.4.2",
+    "google-auth-library": "^6.0.6",
+    "google-oauth-jwt": "^0.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.19",
+    "mongoose": "^5.9.25",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.11",
+    "request": "^2.88.2",
+    "sharp": "^0.25.4",
+    "superagent": "^5.3.1",
+    "validator": "^13.1.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
