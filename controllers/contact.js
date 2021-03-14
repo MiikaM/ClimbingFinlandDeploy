@@ -15,8 +15,13 @@ const { sendContactInfo } = require('../services/contactService')
 contactRouter.get('/verification/:token', async (req, res) => {
 
   try {
+    console.log('Tapahtyy')
+    
     const { user: id } = jwt.verify(req.params.token, process.env.EMAIL_SECRET)
     await UserBase.findByIdAndUpdate(id, { verified: true })
+
+    console.log({id})
+    
 
     return res.redirect('https://climbing-finland-v2.herokuapp.com/')
   } catch (err) {
