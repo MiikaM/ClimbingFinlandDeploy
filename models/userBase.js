@@ -31,7 +31,7 @@ const userBaseSchema = mongoose.Schema({
   },
   avatar: {
     type: String,
-    default: 'uploads/resized/1613377150308chad-madden-8mCMQSq41gQ-unsplash.jpg'
+    default: 'uploads\\resized\\1613377150308chad-madden-8mCMQSq41gQ-unsplash.jpg'
   },
   city: {
     type: String,
