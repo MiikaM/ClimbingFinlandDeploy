@@ -2,6 +2,7 @@ const Place = require('../models/place')
 const logger = require('../utils/logger')
 const { uploadImage } = require('../utils/placeHandling')
 const fs = require('fs')
+const Comment = require('../models/comment')
 
 /**
  * 
