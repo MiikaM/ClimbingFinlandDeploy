@@ -147,16 +147,22 @@ const hashPassword = async (passwords) => {
  * @param {*} user 
  */
 const sendVerificationEmail = (user) => {
+  console.log('verif email', { user })
+  try {
+    const token = jwt.sign({ user: user.id }, process.env.EMAIL_SECRET, { expiresIn: '1d' })
+    const url = `https://climbing-finland-v2.herokuapp.com/api/verification/${token}`
 
-  const token = jwt.sign({ user: user.id }, process.env.EMAIL_SECRET, { expiresIn: '1d' })
-  const url = `https://climbing-finland-v2.herokuapp.com/api/verification/${token}`
+    console.log({ url, token })
 
-  transporter.sendMail({
-    to: user.email, // list of receivers
-    subject: 'Verify your account', // Subject line
-    html: `<h1>Verify</h1><div>Verify your email by clicking the link below <br/> <a href=${url}>${url}</a></p></div>`, // html body
-  })
+    transporter.sendMail({
+      to: user.email, // list of receivers
+      subject: 'Verify your account', // Subject line
+      html: `<h1>Verify</h1><div>Verify your email by clicking the link below <br/> <a href=${url}>${url}</a></p></div>`, // html body
+    })
+  } catch (err) {
+    console.error( err.messsage )
 
+  }
 }
 
 /**

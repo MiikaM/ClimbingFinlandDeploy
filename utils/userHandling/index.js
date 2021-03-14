@@ -16,7 +16,8 @@ const { hashPassword } = require('../../services/userService')
  */
 const userChecker = async (user_data) => {
 
-
+ console.log({user_data})
+ 
   if (!user_data.password) {
     throw new Error('Password is invalid')
   }

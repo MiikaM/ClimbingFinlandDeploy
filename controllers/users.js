@@ -45,7 +45,8 @@ usersRouter.post('/', async (req, res) => {
 
   try {
     const body = req.body
-
+    
+    console.log({body})
     const userToSave = await userChecker(body)
     const savedUser = await userToSave.save()
 
