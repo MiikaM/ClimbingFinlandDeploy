@@ -29,7 +29,7 @@ mongoose.connect(mongoUrl, { useCreateIndex: true, useFindAndModify: false, useN
   })
 
 app.use(express.static('build'))
-
+// NO
 // WILL - IT _ WORK
 app.use(cors({
   origin: ['http://localhost:3000'],
