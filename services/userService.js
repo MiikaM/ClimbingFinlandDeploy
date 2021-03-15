@@ -155,6 +155,7 @@ const sendVerificationEmail = (user) => {
     console.log({ url, token })
 
     transporter.sendMail({
+      from: 'contact@climbingfinland.com',
       to: user.email, // list of receivers
       subject: 'Verify your account', // Subject line
       html: `<h1>Verify</h1><div>Verify your email by clicking the link below <br/> <a href=${url}>${url}</a></p></div>`, // html body
@@ -176,6 +177,7 @@ const sendResetPasswordEmail = (user) => {
     const url = `https://climbing-finland-v2.herokuapp.com/api/passwordReset/${token}`
 
     transporter.sendMail({
+      from: 'contact@climbingfinland.com',
       to: user.email,
       subject: 'Reset your password',
       html: `<h1>Link to reset your Password</h1> 

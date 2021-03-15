@@ -10,7 +10,8 @@ const sendContactInfo = async (contact_info) => {
 
   try {
     transporter.sendMail({
-      to: 'mikkonen.firebase@gmail.com',
+      from:'contact@climbingfinland.com',
+      to: process.env.RECIPIENT_EMAIL,
       subject: `New contact request: ${contact_info.name}`,
       html: `<div><h1> Message:</h1><p> ${contact_info.message}</p>  <div> <Strong>From: ${contact_info.email}</Strong></div></div>`
     })
